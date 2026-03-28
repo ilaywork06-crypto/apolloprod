@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(find ./APOLLO_PROD_LICENSED -name *.py)",
+      "Bash(grep -r \"risksmap\\\\|risks_map\" ./APOLLO_PROD_LICENSED --include=*.js --include=*.json --include=*.md --include=*.txt)",
+      "Bash(grep -r data/ ./APOLLO_PROD_LICENSED --include=*.json --include=*.md --include=*.txt --include=*.sh --include=*.bat)",
+      "Bash(python3 -c \"import py_compile; py_compile.compile\\(''./APOLLO_PROD_LICENSED/src/parsers/risk_map_parser.pyc'', doraise=False\\)\")",
+      "Bash(git ls-tree:*)"
     ]
   }
 }

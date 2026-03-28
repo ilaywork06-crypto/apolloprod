@@ -8,9 +8,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY src/ ./src/
 COPY frontend/ ./frontend/
 COPY server.pyc .
-
-# Create data volume mount point
-RUN mkdir -p /app/data
+COPY data/ ./data/
 
 EXPOSE 8000
 
