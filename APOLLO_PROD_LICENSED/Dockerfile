@@ -9,7 +9,9 @@ COPY src/ ./src/
 COPY frontend/ ./frontend/
 COPY server.pyc .
 COPY data/ ./data/
+COPY entrypoint.sh .
+RUN chmod +x entrypoint.sh
 
 EXPOSE 8000
 
-CMD ["python", "server.pyc"]
+CMD ["./entrypoint.sh"]

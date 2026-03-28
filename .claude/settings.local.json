@@ -6,7 +6,10 @@
       "Bash(grep -r \"risksmap\\\\|risks_map\" ./APOLLO_PROD_LICENSED --include=*.js --include=*.json --include=*.md --include=*.txt)",
       "Bash(grep -r data/ ./APOLLO_PROD_LICENSED --include=*.json --include=*.md --include=*.txt --include=*.sh --include=*.bat)",
       "Bash(python3 -c \"import py_compile; py_compile.compile\\(''./APOLLO_PROD_LICENSED/src/parsers/risk_map_parser.pyc'', doraise=False\\)\")",
-      "Bash(git ls-tree:*)"
+      "Bash(git ls-tree:*)",
+      "Bash(find /c/Users/ilay atia/code/apolloprod/APOLLO_PROD_LICENSED/src/api -type f -name *.py)",
+      "Bash(find /c/Users/ilay atia/code/apolloprod/APOLLO_PROD_LICENSED/src/core -type f -name *.py)",
+      "Bash(grep -o משקיע[^]* /c/Users/ilay atia/code/apolloprod/APOLLO_PROD_LICENSED/frontend/static/js/main.a90ff064.js)"
     ]
   }
 }
